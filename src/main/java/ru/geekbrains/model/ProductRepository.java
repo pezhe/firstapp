@@ -34,7 +34,7 @@ public class ProductRepository {
 
     private Product parseProduct(String line) {
         String[] args = line.split(",");
-        return new Product(Integer.parseInt(args[0]), args[1], Double.parseDouble(args[2]));
+        return new Product(Long.parseLong(args[0]), args[1], Double.parseDouble(args[2]));
     }
 
     public Optional<Product> getProduct(long id) {
