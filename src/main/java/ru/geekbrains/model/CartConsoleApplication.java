@@ -14,5 +14,8 @@ public class CartConsoleApplication {
         cart.removeProduct(1, 1);
         cart.removeProduct(2, 2);
         cart.show();
+        Cart cart2 = context.getBean("cart", Cart.class);
+        cart2.addProduct(3,5);
+        cart2.show();
     }
 }

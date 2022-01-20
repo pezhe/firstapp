@@ -1,12 +1,14 @@
 package ru.geekbrains.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @Component("cart")
+@Scope("prototype")
 public class Cart {
 
     private final Map<Product, Integer> content = new HashMap<>();
